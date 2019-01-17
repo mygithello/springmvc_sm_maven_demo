@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- namespace:写对应接口的全类名 -->
+
+<mapper  namespace="com.demo.ssm.dao.UserDao">
+	<resultMap type="com.demo.ssm.entity.User" id="userResult">
+		<result column="id" property="id"/>
+		<result column="username" property="username"/>
+		<result column="password" property="password"/>
+	</resultMap>
+
+	<insert id="insert">
+		insert into user values(#{id},#{username},#{password})
+	</insert>
+
+</mapper>
